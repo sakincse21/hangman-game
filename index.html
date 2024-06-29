@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <nav>
+        <ul class="header">
+            <li> <a href="#" id="title">Hangman Game</a></li>
+            <li style="float:right" id="replayButton"><a href="#keyboardSection" style="font-size: 30px;">Replay</a></li>
+        </ul>
+    </nav>
+
+    <div class="playerImgSection">
+        <img src="imgs/hang_1.gif" alt="" id="playerImage">
+    </div>
+
+    <div class="textSection">
+        <p>Your Guess</p>
+        <p id="guessByPlayer"></p>
+        <p style="font-size: 20px;">Total Letters: <span id="totalLetters">0</span></p>
+    </div>
+
+    <div class="keyboardSection flex-container">
+        <div class="buttons"><button id="buttonA">A</button></div>
+        <div class="buttons"><button id="buttonB">B</button></div>
+        <div class="buttons"><button id="buttonC">C</button></div>
+        <div class="buttons"><button id="buttonD">D</button></div>
+        <div class="buttons"><button id="buttonE">E</button></div>
+        <div class="buttons"><button id="buttonF">F</button></div>
+        <div class="buttons"><button id="buttonG">G</button></div>
+        <div class="buttons"><button id="buttonH">H</button></div>
+        <div class="buttons"><button id="buttonI">I</button></div>
+        <div class="buttons"><button id="buttonJ">J</button></div>
+        <div class="buttons"><button id="buttonK">K</button></div>
+        <div class="buttons"><button id="buttonL">L</button></div>
+        <div class="buttons"><button id="buttonM">M</button></div>
+        <div class="buttons"><button id="buttonN">N</button></div>
+        <div class="buttons"><button id="buttonO">O</button></div>
+        <div class="buttons"><button id="buttonP">P</button></div>
+        <div class="buttons"><button id="buttonQ">Q</button></div>
+        <div class="buttons"><button id="buttonR">R</button></div>
+        <div class="buttons"><button id="buttonS">S</button></div>
+        <div class="buttons"><button id="buttonT">T</button></div>
+        <div class="buttons"><button id="buttonU">U</button></div>
+        <div class="buttons"><button id="buttonV">V</button></div>
+        <div class="buttons"><button id="buttonW">W</button></div>
+        <div class="buttons"><button id="buttonX">X</button></div>
+        <div class="buttons"><button id="buttonY">Y</button></div>
+        <div class="buttons"><button id="buttonZ">Z</button></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
