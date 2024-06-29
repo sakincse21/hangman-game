@@ -46,8 +46,10 @@ function buttonClicked(buttonID) {
     }
     document.getElementById('guessByPlayer').innerText = guessedWord;
     if (guessedWord == generatedWord) {
-        alert('Congratulations!!! You Won...');
-        window.location.reload();
+        setTimeout(() => {
+            alert('Congratulations!!! You Won...');
+            window.location.reload();
+        }, 500);
     }
     if (letterCheck == false) {
         tries++;
