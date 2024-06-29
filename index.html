@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,7 +15,6 @@
     <nav>
         <ul class="header">
             <li> <a href="#" id="title">Hangman Game</a></li>
-            <li style="float:right" id="replayButton"><a href="#keyboardSection" style="font-size: 30px;">Replay</a></li>
         </ul>
     </nav>
 
@@ -22,41 +23,53 @@
     </div>
 
     <div class="textSection">
-        <p>Your Guess</p>
+        <p id="yourGuess">Your Guess</p>
         <p id="guessByPlayer"></p>
         <p style="font-size: 20px;">Total Letters: <span id="totalLetters">0</span></p>
+        <p id="replayButton"><button class="btn btn-primary id="">Replay</button></p>
+        
     </div>
 
-    <div class="keyboardSection flex-container">
-        <div class="buttons"><button id="buttonA">A</button></div>
-        <div class="buttons"><button id="buttonB">B</button></div>
-        <div class="buttons"><button id="buttonC">C</button></div>
-        <div class="buttons"><button id="buttonD">D</button></div>
-        <div class="buttons"><button id="buttonE">E</button></div>
-        <div class="buttons"><button id="buttonF">F</button></div>
-        <div class="buttons"><button id="buttonG">G</button></div>
-        <div class="buttons"><button id="buttonH">H</button></div>
-        <div class="buttons"><button id="buttonI">I</button></div>
-        <div class="buttons"><button id="buttonJ">J</button></div>
-        <div class="buttons"><button id="buttonK">K</button></div>
-        <div class="buttons"><button id="buttonL">L</button></div>
-        <div class="buttons"><button id="buttonM">M</button></div>
-        <div class="buttons"><button id="buttonN">N</button></div>
-        <div class="buttons"><button id="buttonO">O</button></div>
-        <div class="buttons"><button id="buttonP">P</button></div>
-        <div class="buttons"><button id="buttonQ">Q</button></div>
-        <div class="buttons"><button id="buttonR">R</button></div>
-        <div class="buttons"><button id="buttonS">S</button></div>
-        <div class="buttons"><button id="buttonT">T</button></div>
-        <div class="buttons"><button id="buttonU">U</button></div>
-        <div class="buttons"><button id="buttonV">V</button></div>
-        <div class="buttons"><button id="buttonW">W</button></div>
-        <div class="buttons"><button id="buttonX">X</button></div>
-        <div class="buttons"><button id="buttonY">Y</button></div>
-        <div class="buttons"><button id="buttonZ">Z</button></div>
+    <div class="keyboardSection container">
+        <div class="row d-flex justify-content-around">
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonA">A</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonB">B</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonC">C</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonD">D</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonE">E</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonF">F</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonG">G</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonH">H</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonI">I</button></div>
+        </div>
+        <div class="row d-flex justify-content-around">
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonJ">J</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonK">K</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonL">L</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonM">M</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonN">N</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonO">O</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonP">P</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonQ">Q</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonR">R</button></div>
+        </div>
+        <div class="row d-flex justify-content-around">
+
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonS">S</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonT">T</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonU">U</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonV">V</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonW">W</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonX">X</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonY">Y</button></div>
+            <div class="buttons col-sm-1"><button class="buttonsClass button-30" id="buttonZ">Z</button></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -53,14 +53,21 @@ function buttonClicked(buttonID) {
     }
     if (letterCheck == false) {
         tries++;
+        if(tries>7){
+            tries=7;
+        }
         const playerImage = document.getElementById('playerImage');
         var imageLocation = 'imgs/hang_' + tries + '.gif';
         playerImage.src = imageLocation;
         if (tries >= 7) {
-            setTimeout(() => {
-                alert(`You're dead!!! Try Again...`);
-                window.location.reload();
-            }, 1000);
+            alert('You are dead. Click Replay...');
+            document.getElementById('yourGuess').innerText='Correct Word';
+            document.getElementById('guessByPlayer').innerText = generatedWord;
+            const allButtons = document.getElementsByClassName('buttonsClass');
+            //console.log(allButtons);
+            for(let i=0;i<allButtons.length;i++){
+                allButtons[i].disabled=true;
+            }
         }
     }
 }
